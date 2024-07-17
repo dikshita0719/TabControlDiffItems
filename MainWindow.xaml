@@ -1,0 +1,59 @@
+﻿<Window x:Class="deletelater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:deletelater"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Tab 1">
+                <Grid>
+                    <Button x:Name="Btn11" Margin="10,100,567,236" FontSize="30" Click="btn11_Click">love you</Button>
+                    <Canvas x:Name="myCanvas" Margin="251,10,10,10" Background="DarkBlue">
+                        <Rectangle x:Name="myRect" Height="80" Width="119" Stroke="Black" Visibility="Hidden" StrokeThickness="1.8"
+                               Canvas.Left="10" Canvas.Top="113" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        </Rectangle>
+                        <Ellipse x:Name="myBall1" Height="30" Width="30"  Stroke="Black" StrokeThickness="1.8" Visibility="Hidden"
+                             Canvas.Left="40" Canvas.Top="193" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                        <Ellipse x:Name="myBall2" Height="30" Width="30"  Stroke="Black" StrokeThickness="1.8" Visibility="Hidden"
+                             Canvas.Left="75" Canvas.Top="193" HorizontalAlignment="Left" VerticalAlignment="Center"></Ellipse>
+                    </Canvas>
+                </Grid>
+
+            </TabItem>
+
+            <TabItem Header="Tab 2">
+                <Grid>
+                    <TextBlock Text="Eingabe einer natürlichen Zahl durch 7 teilbar" Margin="438,16,51,321" FontSize="18"  
+                               Background="AliceBlue" TextWrapping="Wrap"></TextBlock>
+                    <ListBox x:Name="ausgabe" Margin="20,80,472,20"></ListBox>
+                    <TextBox x:Name="eingabe" Margin="506,109,120,216"></TextBox>
+                    <Button x:Name="Btn21" Margin="484,203,98,134" Click="btn21_Click" FontSize="25" Content="Berechnen"></Button>
+                    <Button x:Name="btn22" Margin="484,296,98,41" Click="btn22_Click" FontSize="25" Content="Löschen"></Button>
+                </Grid>
+                
+            </TabItem>
+
+            <TabItem Header="Tab 3">
+                <Grid Margin="50,50,50,50">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Rectangle x:Name="rect1" Grid.Column="0" Grid.Row="0" Fill="LightPink" Visibility="Collapsed"></Rectangle>
+                    <Rectangle x:Name="rect2" Grid.Column="1" Grid.Row="1" Fill="LightPink" Visibility="Collapsed"></Rectangle>
+                    <Rectangle x:Name="rect3" Grid.Column="2" Grid.Row="2" Fill="LightPink" Visibility="Collapsed"></Rectangle>
+                    <Button x:Name="btn31" Grid.Row="0" Grid.Column="2" Content="Show/Clear" Background="Aquamarine" FontSize="20" Click="btn31_CLick"></Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
